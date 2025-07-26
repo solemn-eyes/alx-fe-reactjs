@@ -4,12 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
+import RecipeDetails from './components/RecipeDetails'
+import EditRecipeForm from './components/EditRecipeForm'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const description = "This is a sample recipe description for demonstration purposes."
   return (
+  
     <>
+    
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -34,6 +39,11 @@ function App() {
       <AddRecipeForm />
       <h2>Recipe List</h2>
       <RecipeList />
+      <h2>Recipe Details</h2>
+      <RecipeDetails recipeId={1} />
+      <h2>Edit Recipe Form</h2>
+      <EditRecipeForm recipe={{ id: 1, title: 'Sample Recipe', description }} />
+      
 
     </>
   )
