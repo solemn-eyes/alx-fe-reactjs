@@ -1,5 +1,6 @@
 
 import useRecipeStore from './recipeStore';
+import { Link } from 'react-router-dom';
 
 const RecipeList = () => {
   // Use filteredRecipes from the store instead of recipes
@@ -20,7 +21,9 @@ const RecipeList = () => {
     <div>
       {filteredRecipes.map(recipe => (
         <div key={recipe.id} style={{ border: '1px solid #ccc', margin: '8px', padding: '8px' }}>
-          <h3>{recipe.title}</h3>
+          <h3>
+            <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+          </h3>
           <p>{recipe.description}</p>
           <button onClick={() => handleUpdate(recipe)} style={{ marginRight: '8px' }}>Update</button>
           <button onClick={() => deleteRecipe(recipe.id)} style={{ color: 'white', background: 'red', border: 'none', padding: '4px 8px', borderRadius: '4px', cursor: 'pointer' }}>Delete</button>
