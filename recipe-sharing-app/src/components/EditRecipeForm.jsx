@@ -25,7 +25,7 @@ const EditRecipeForm = ({ recipe }) => {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Description"
             />
-            
+            <button type="submit">Update Recipe</button>
         </form>
     );
 };
