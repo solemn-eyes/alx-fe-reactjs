@@ -1,13 +1,7 @@
 import useRecipeStore from "./recipeStore";
 import { useState } from 'react';
 
-const updateRecipe = (recipe) => {
-    useRecipeStore.getState().updateRecipe(recipe);
-};
 
-const deleteRecipe = (id) => {
-    useRecipeStore.getState().deleteRecipe(id);
-}
 
 const EditRecipeForm = ({ recipe }) => {
     const [title, setTitle] = useState(recipe.title);
@@ -31,8 +25,7 @@ const EditRecipeForm = ({ recipe }) => {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Description"
             />
-            <button type="submit">Update Recipe</button>
-            <button type="button" onClick={() => deleteRecipe(recipe.id)}>Delete Recipe</button>
+            
         </form>
     );
 };

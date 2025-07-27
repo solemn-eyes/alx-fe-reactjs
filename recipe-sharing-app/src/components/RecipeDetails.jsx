@@ -12,8 +12,7 @@ const RecipeDetails = () => {
         <div>
             <h1>{recipe.title}</h1>
             <p>{recipe.description}</p>
-            <button onClick={() => useRecipeStore.getState().deleteRecipe(recipe.id)}>Delete Recipe</button>
-            <button onClick={() => useRecipeStore.getState().updateRecipe({ ...recipe, title: "Updated Title", description: "Updated Description" })}>Update Recipe</button>
+            
         </div>
     );
 };

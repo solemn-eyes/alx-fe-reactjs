@@ -6,11 +6,11 @@ import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
 import EditRecipeForm from './components/EditRecipeForm'
-import { BrowserRouter } from 'react-router-dom'
+import DeleteRecipeButton from './components/DeleteRecipeButton'
 
 function App() {
   const [count, setCount] = useState(0)
-  const description = "This is a sample recipe description for demonstration purposes."
+  const description = " "
   return (
   
     <>
@@ -23,14 +23,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
@@ -43,6 +39,8 @@ function App() {
       <RecipeDetails recipeId={1} />
       <h2>Edit Recipe Form</h2>
       <EditRecipeForm recipe={{ id: 1, title: 'Sample Recipe', description }} />
+      <h2>Delete Recipe Button</h2>
+      <DeleteRecipeButton recipeId={1} onDelete={(id) => console.log(`Recipe with ID ${id} deleted`)} />
       
 
     </>
