@@ -6,6 +6,8 @@ import SearchBar from './components/SearchBar'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
+import FavoritesList from './components/FavoritesList'
+import RecommendationsList from './components/RecommendationsList'
 import EditRecipeForm from './components/EditRecipeForm'
 import DeleteRecipeButton from './components/DeleteRecipeButton'
 
@@ -35,14 +37,25 @@ function App() {
       
       <h1>Recipe Sharing App</h1>
       <SearchBar />
+
       <h2>Recipe Form</h2>
       <AddRecipeForm />
+
       <h2>Recipe List</h2>
       <RecipeList />
+
       <h2>Recipe Details</h2>
       <RecipeDetails recipeId={1} />
+
+      <h2>Favorites</h2>
+      <FavoritesList />
+
+      <h3>Recommendations</h3>
+      <RecommendationsList />
+
       <h2>Edit Recipe Form</h2>
       <EditRecipeForm recipe={{ id: 1, title: 'Sample Recipe', description }} />
+      
       <h2>Delete Recipe Button</h2>
       <DeleteRecipeButton recipeId={1} onDelete={(id) => console.log(`Recipe with ID ${id} deleted`)} />
       
