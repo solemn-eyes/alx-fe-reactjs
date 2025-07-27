@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import SearchBar from './components/SearchBar'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
 import RecipeDetails from './components/RecipeDetails'
@@ -31,6 +32,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      
+      <h1>Recipe Sharing App</h1>
+      <SearchBar />
       <h2>Recipe Form</h2>
       <AddRecipeForm />
       <h2>Recipe List</h2>
