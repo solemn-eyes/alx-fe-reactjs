@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Search from './components/Search'
 
 function Home() {
   return <h1>Home Page</h1>
@@ -40,6 +41,8 @@ function App() {
             <p className="read-the-docs">
               Click on the Vite and React logos to learn more
             </p>
+            <h1 style={{ textAlign: "center" }}>GitHub User Search</h1>
+            <Search />
           </>
         } />
         <Route path="/about" element={<About />} />
