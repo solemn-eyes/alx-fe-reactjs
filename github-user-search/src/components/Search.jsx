@@ -19,7 +19,7 @@ function Search() {
             setUser(data);
 
         }catch (error) {
-            setError("Looks like we have an error here. Can't find the user");
+            setError("Looks like we cant find the user");
         }finally {
             setLoading(false);
         }
